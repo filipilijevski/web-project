@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title> The Bebstore - Hotel Booking </title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- Navigation/Header Section -->
+    <header>
+      <div class="header-section">
+        <div class="main-title">
+          <!-- Added small logo image beside the title -->
+          <img src="images/bebstorelogo.png" alt="The Bebstore Logo" class="main-logo" />
+          <h2> The Bebstore </h2>
+        </div>
+        <div class="link-section">
+          <!-- Expanded Navigation Menu -->
+          <div class="header-link">
+            <a href="index.html" rel="noopener noreferrer">Home</a>
+          </div>
+          <div class="header-link">
+            <a href="search.html" rel="noopener noreferrer">Search Rooms</a>
+          </div>
+          <div class="header-link">
+            <a href="customer.html" rel="noopener noreferrer">Customer</a>
+          </div>
+          <div class="header-link">
+            <a href="employee.html" rel="noopener noreferrer">Employee</a>
+          </div>
+          <div class="header-link">
+            <a href="about.html" rel="noopener noreferrer">About Us</a>
+          </div>
+          <div class="header-link">
+            <a href="products.html" rel="noopener noreferrer">Our Hotels</a>
+          </div>
+        </div>
+        <!-- Dedicated container for user info (positioned via CSS) -->
+        <div id="user-info" class="user-info"></div>
+      </div>
+    </header>
+
+    <!-- Hero / Intro Section -->
+    <section class="top-section">
+      <div class="intro-section">
+        <div class="text-section">
+          <p class="bigger-text">
+            Find Your Perfect Stay
+          </p>
+          <div class="small-text-button">
+            <p class="smaller-text">
+              Search among top hotel chains and book your ideal room instantly.
+            </p>
+            <!-- Modified Button: Clicking navigates to customer.html -->
+            <button id="button1" type="button" onclick="location.href='customer.html'">
+              <strong> Sign Up </strong>
+            </button>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="images/generichotelhomepage.jpg" alt="Hotel Booking Logo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Available Rooms Summary Section -->
+    <section class="rooms-summary">
+      <div class="information-title">
+        <strong>Available Rooms Now</strong>
+      </div>
+      <div class="information-boxes">
+        <div class="infobox">
+          <div class="image">
+            <img src="images/2starhotel.jpg" alt="Affordable Options" height="150" width="150" />
+          </div>
+          <p class="image-text">Affordable Options</p>
+        </div>
+        <div class="infobox">
+          <div class="image">
+            <img src="images/3starhotel.jpg" alt="City Retreat" height="150" width="150" />
+          </div>
+          <p class="image-text">City Retreat</p>
+        </div>
+        <div class="infobox">
+          <div class="image">
+            <img src="images/4starhotel.jpg" alt="Mountain Getaways" height="150" width="150" />
+          </div>
+          <p class="image-text">Mountain Getaways</p>
+        </div>
+        <div class="infobox">
+          <div class="image">
+            <img src="images/5starhotel.jpeg" alt="Modern Luxury" height="150" width="150" />
+          </div>
+          <p class="image-text">Modern Luxury</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="information-section">
+      <div class="information-title">
+        <strong>About Our Booking Platform</strong>
+      </div>
+      <div class="information-text">
+        <p>
+          The Bebstore brings together five renowned hotel chains across North America,
+          allowing you to search, book, and enjoy a wide range of rooms in real time.
+          Whether you need a cozy cabin, a luxurious suite, or a modern room with stunning views,
+          we have something for everyone.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimony Section -->
+    <section class="testimony-section">
+      <div class="testimony">
+        <p>
+          "The Bebstore made booking our vacation a breeze. Their selection and service are unparalleled."
+        </p>
+      </div>
+      <div class="quote-source">
+        <p> - Maria, Satisfied Traveler </p>
+      </div>
+    </section>
+
+    <!-- Sign Up Call-To-Action Section -->
+    <section class="signup-section">
+      <div class="signup-box">
+        <p class="call-to-action">
+          Ready to book your next stay?
+        </p>
+        <p class="click-button-text">
+          Sign up today and experience the best hotel booking service!
+        </p>
+        <!-- Modified Button: Clicking navigates to customer.html -->
+        <div class="bottom-button">
+          <button id="button2" type="button" onclick="location.href='customer.html'">
+            <strong> Sign Up </strong>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bottom-section">
+      <p class="copyright-text">
+        &copy; 2021 The Bebstore. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

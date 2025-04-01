@@ -1,0 +1,1302 @@
+/* ============================================
+   1. Base Styles
+   ============================================ */
+   * {
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ============================================
+     2. Header / Navigation
+     ============================================ */
+  header {
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 1rem 90px;
+  }
+  
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-title h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+
+.main-title {
+  display: flex;
+  align-items: center;
+}
+
+.main-logo {
+  width: 40px;          /* Adjust size as needed */
+  height: auto;         /* Maintain aspect ratio */
+  margin-right: 10px;   /* Space between the logo and title text */
+}
+  
+  .link-section {
+    display: flex;
+    gap: 2em;
+    font-weight: 700;
+  }
+  
+  .link-section .header-link a {
+    font-size: 16px;
+    color: #E5E7EB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .link-section .header-link a:hover {
+    color: #3882F6;
+  }
+
+  .user-info {
+    margin-left: 1rem; /* Adds space between nav links and user info */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the welcome text */
+  .user-welcome {
+    margin-right: 1rem;
+    font-size: 16px;
+    color: #F9FAF8;
+  }
+  
+  /* Style for login and logout buttons */
+  .login-btn,
+  .logout-btn {
+    background-color: #3882F6; 
+    color: #F9FAF8;
+    border: 2px solid #F9FAF8;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    height: 40px;
+    width: 95px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover,
+  .logout-btn:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     3. Hero / Intro Section (Homepage)
+     ============================================ */
+  .top-section, .intro-section {
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 75px 90px 150px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18em;
+  }
+  
+  .text-section {
+    max-width: 650px;
+  }
+  
+  .bigger-text {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;
+  }
+  
+  .smaller-text {
+    font-size: 18px;
+    margin-top: 1em;
+  }
+  
+  .small-text-button {
+    margin-top: 1em;
+  }
+  
+  #button1, #button2 {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: 2px solid #F9FAF8;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    height: 40px;
+    width: 95px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #button1:hover, #button2:hover {
+    background-color: #2d6cb2;
+  }
+  
+  .image-section img {
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* ============================================
+     4. Rooms Summary & Information Sections (Homepage)
+     ============================================ */
+  .rooms-summary {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+    text-align: center;
+  }
+  
+  .information-title {
+    font-size: 36px;
+    color: #1F2937;
+    margin-bottom: 1rem;
+  }
+  
+  .information-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5em;
+  }
+  
+  .infobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .infobox .image img {
+    border-radius: 10%;
+    border: 3px solid #3882F6;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .image-text {
+    width: 150px;
+    margin-top: 0.5rem;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .information-section {
+    background-color: #FFFFFF;
+    padding: 2rem 90px;
+    text-align: center;
+  }
+  
+  .information-section .information-title {
+    font-size: 36px;
+    color: #1F2937;
+    margin-bottom: 1rem;
+  }
+  
+  .information-text p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1F2937;
+  }
+  
+  /* ============================================
+     5. Testimony & Sign Up Sections (Homepage)
+     ============================================ */
+  .testimony-section {
+    background-color: #E5E7EB;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .testimony {
+    font-size: 36px;
+    color: #1F2937;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  
+  .quote-source {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  
+  .signup-section {
+    background-color: #F9FAF8;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signup-box {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border-radius: 10px;
+    padding: 30px 60px;
+    text-align: center;
+  }
+  
+  .call-to-action {
+    font-size: 25px;
+    margin-bottom: 0.5em;
+  }
+  
+  .click-button-text {
+    margin-bottom: 1em;
+  }
+  
+  /* ============================================
+     6. Footer Section (All Pages)
+     ============================================ */
+  .bottom-section {
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 1rem;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  /* ============================================
+     7. Search Page Specific Styles
+     ============================================ */
+  .search-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .search-section .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .search-form .form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-form .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .search-form label {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: #1F2937;
+  }
+  
+  .search-form input,
+  .search-form select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-form button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-form button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  .results-section {
+    background-color: #FFFFFF;
+    padding: 2rem 90px;
+    text-align: center;
+  }
+  
+  #resultsContainer {
+    margin-top: 1.5rem;
+  }
+  
+  /* ============================================
+     8. Booking Page Specific Styles
+     ============================================ */
+  .booking-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .booking-section .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .booking-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .room-info {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  
+  .room-info .room-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #3882F6;
+  }
+  
+  .room-description {
+    margin-top: 1rem;
+  }
+  
+  .room-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1F2937;
+  }
+  
+  .room-description p {
+    font-size: 1rem;
+    color: #1F2937;
+  }
+  
+  .booking-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .booking-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-form label {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: #1F2937;
+  }
+  
+  .booking-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .booking-form .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .booking-form button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .booking-form button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     9. Customer Page Specific Styles
+     ============================================ */
+  .customer-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .customer-section .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .customer-forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  
+  .form-panel {
+    flex: 1 1 350px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .form-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .login-form,
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #1F2937;
+  }
+  
+  .form-group input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .customer-section button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .customer-section button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     10. Employee Page Specific Styles
+     ============================================ */
+  .employee-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .employee-section .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .employee-forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  
+  .employee-section .form-panel {
+    flex: 1 1 350px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .employee-section .form-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .employee-forms .login-form,
+  .employee-forms .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .employee-section .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .employee-section .form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #1F2937;
+  }
+  
+  .employee-section .form-group input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .employee-section .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .employee-section button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .employee-section button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     11. Employee Home Page Specific Styles
+     ============================================ */
+  .employee-home-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .employee-home-section .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .employee-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+  }
+  
+  .dashboard-panel {
+    flex: 1 1 450px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .dashboard-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .dashboard-table th,
+  .dashboard-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .dashboard-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .dashboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dashboard-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .employee-actions {
+    text-align: center;
+  }
+  
+  .employee-actions h3 {
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .action-btn {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     12. Customer Home Page Specific Styles
+     ============================================ */
+  .customer-home-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .customer-home-section .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .customer-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+  }
+  
+  .customer-dashboard .dashboard-panel {
+    flex: 1 1 450px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .customer-dashboard .dashboard-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .customer-dashboard .dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .customer-dashboard .dashboard-table th,
+  .customer-dashboard .dashboard-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .customer-dashboard .dashboard-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .customer-dashboard .dashboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .customer-dashboard .dashboard-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Payment Section for Customer Home */
+  .payment-section {
+    background-color: #FFFFFF;
+    padding: 1.5rem 90px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .payment-section h3 {
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .payment-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-form label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #1F2937;
+  }
+  
+  .payment-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .payment-form .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .payment-form button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-form button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     13. Employee Page Specific Styles
+     ============================================ */
+  .employee-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .employee-section .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .employee-forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  
+  .employee-section .form-panel {
+    flex: 1 1 350px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .employee-section .form-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .employee-forms .login-form,
+  .employee-forms .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .employee-section .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .employee-section .form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #1F2937;
+  }
+  
+  .employee-section .form-group input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .employee-section .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .employee-section button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .employee-section button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     14. Employee Home Page Specific Styles
+     ============================================ */
+  .employee-home-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .employee-home-section .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .employee-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+  }
+  
+  .dashboard-panel {
+    flex: 1 1 450px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .dashboard-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .dashboard-table th,
+  .dashboard-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .dashboard-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .dashboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dashboard-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .employee-actions {
+    text-align: center;
+  }
+  
+  .employee-actions h3 {
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .action-btn {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     15. Customer Home Page Specific Styles
+     ============================================ */
+  .customer-home-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .customer-home-section .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .customer-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+  }
+  
+  .customer-dashboard .dashboard-panel {
+    flex: 1 1 450px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .customer-dashboard .dashboard-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .customer-dashboard .dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .customer-dashboard .dashboard-table th,
+  .customer-dashboard .dashboard-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .customer-dashboard .dashboard-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .customer-dashboard .dashboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .customer-dashboard .dashboard-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Payment Section for Customer Home */
+  .payment-section {
+    background-color: #FFFFFF;
+    padding: 1.5rem 90px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .payment-section h3 {
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .payment-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-form label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #1F2937;
+  }
+  
+  .payment-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .payment-form .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .payment-form button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-form button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     16. Employee Page Specific Styles
+     ============================================ */
+  .employee-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+  }
+  
+  .employee-section .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .employee-forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  
+  .employee-section .form-panel {
+    flex: 1 1 350px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .employee-section .form-panel h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F2937;
+  }
+  
+  .employee-forms .login-form,
+  .employee-forms .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .employee-section .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .employee-section .form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #1F2937;
+  }
+  
+  .employee-section .form-group input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .employee-section .form-group.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .employee-section button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .employee-section button:hover {
+    background-color: #2d6cb2;
+  }
+  
+  /* ============================================
+     17. About & Products Page Specific Styles
+     ============================================ */
+  .about-section {
+    background-color: #FFFFFF;
+    padding: 2rem 90px;
+    text-align: center;
+  }
+  
+  .about-section .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .about-section .section-title {
+    font-size: 2.5rem;
+    color: #1F2937;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section .about-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1F2937;
+    margin-bottom: 1rem;
+  }
+  
+  .products-section {
+    background-color: #F9FAF8;
+    padding: 2rem 90px;
+    text-align: center;
+  }
+  
+  .products-section .container {
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  .products-section .section-title {
+    font-size: 2.5rem;
+    color: #1F2937;
+    margin-bottom: 1rem;
+  }
+  
+  .products-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background-color: #FFFFFF;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1F2937;
+  }
+  
+  .product-card p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+    color: #1F2937;
+  }
+
+  /* ============================================
+   18. Search Results - Result Card Styles
+   ============================================ */
+  .result-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    background-color: #fff;
+  }
+  
+  
+  /* ============================================
+     19. Responsive Adjustments
+     ============================================ */
+  @media (max-width: 768px) {
+    .header-section,
+    .intro-section,
+    .search-section,
+    .booking-section,
+    .customer-section,
+    .employee-section,
+    .employee-home-section,
+    .customer-home-section,
+    .about-section,
+    .products-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .information-boxes,
+    .search-form,
+    .booking-details,
+    .customer-forms,
+    .employee-forms,
+    .employee-dashboard,
+    .customer-dashboard,
+    .products-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .search-form .form-group,
+    .booking-form .form-group,
+    .customer-section .form-group,
+    .employee-section .form-group,
+    .payment-form .form-group {
+      flex: 1 1 100%;
+    }
+  }
+  

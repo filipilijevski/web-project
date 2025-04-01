@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> The Bebstore - Customer Home </title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- Navigation/Header Section (Consistent Across Pages) -->
+    <header>
+      <div class="header-section">
+        <div class="main-title">
+          <img src="images/bebstorelogo.png" alt="The Bebstore Logo" class="main-logo" />
+          <h2> The Bebstore </h2>
+        </div>
+        <div class="link-section">
+          <div class="header-link">
+            <a href="index.html" rel="noopener noreferrer">Home</a>
+          </div>
+          <div class="header-link">
+            <a href="search.html" rel="noopener noreferrer">Search Rooms</a>
+          </div>
+          <div class="header-link">
+            <a href="booking.html" rel="noopener noreferrer">Book a Room</a>
+          </div>
+          <div class="header-link">
+            <a href="customer.html" rel="noopener noreferrer">Customer</a>
+          </div>
+          <div class="header-link">
+            <a href="employee.html" rel="noopener noreferrer">Employee</a>
+          </div>
+          <div class="header-link">
+            <a href="about.html" rel="noopener noreferrer">About Us</a>
+          </div>
+          <div class="header-link">
+            <a href="products.html" rel="noopener noreferrer">Our Hotels</a>
+          </div>
+        </div>
+        <!-- Dedicated container for user info (positioned via CSS) -->
+        <div id="user-info" class="user-info"></div>
+      </div>
+    </header>
+
+    <!-- Customer Home Dashboard Section -->
+    <section class="customer-home-section">
+      <div class="container">
+        <h2 class="section-title">My Dashboard</h2>
+        <div class="customer-dashboard">
+          <!-- Upcoming Bookings Panel -->
+          <div class="dashboard-panel upcoming-bookings-panel">
+            <h3>Upcoming Bookings</h3>
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Hotel</th>
+                  <th>Room</th>
+                  <th>Check-In</th>
+                  <th>Check-Out</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Upcoming bookings will be populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+          <!-- Booking History Panel -->
+          <div class="dashboard-panel booking-history-panel">
+            <h3>Booking History</h3>
+            <ul class="dashboard-list">
+              <!-- Booking history items will be populated dynamically -->
+            </ul>
+          </div>
+        </div>
+        <!-- Payment Method Section -->
+        <div class="payment-section">
+          <h3>Payment Method</h3>
+          <form id="paymentForm" class="payment-form">
+            <div class="form-group">
+              <label for="cardNumber">Card Number:</label>
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" id="paymentBtn">Save Payment Method</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section (Consistent Across Pages) -->
+    <footer class="bottom-section">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2021 The Bebstore. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/customerhome.js"></script>
+  </body>
+</html>

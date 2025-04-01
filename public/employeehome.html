@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> The Bebstore - Employee Home </title>
+    <link rel="icon" href="../images/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      /* Widen the container holding the dashboard */
+      .employee-home-section .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      /* Make the dashboard panels take full width */
+      .dashboard-panel.upcoming-bookings-panel,
+      .dashboard-panel.booking-history-panel {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .dashboard-panel.upcoming-bookings-panel table {
+        width: 100%;
+      }
+      
+      /* Updated Modal Styling */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+      }
+      .modal-content {
+        background-color: #ffffff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 550px; /* widened modal */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      .modal-content h4 {
+        margin-top: 0;
+        color: #3882F6;
+      }
+      .modal-content label {
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .modal-content input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .modal-content button {
+        background-color: #3882F6;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+        margin-right: 10px;
+      }
+      .modal-content button:hover {
+        background-color: #2d6cb2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation/Header Section (Consistent Across Pages) -->
+    <header>
+      <div class="header-section">
+        <div class="main-title">
+          <img src="images/bebstorelogo.png" alt="The Bebstore Logo" class="main-logo" />
+          <h2> The Bebstore </h2>
+        </div>
+        <div class="link-section">
+          <div class="header-link">
+            <a href="index.html" rel="noopener noreferrer">Home</a>
+          </div>
+          <div class="header-link">
+            <a href="search.html" rel="noopener noreferrer">Search Rooms</a>
+          </div>
+          <div class="header-link">
+            <a href="booking.html" rel="noopener noreferrer">Book a Room</a>
+          </div>
+          <div class="header-link">
+            <a href="customer.html" rel="noopener noreferrer">Customer</a>
+          </div>
+          <div class="header-link">
+            <a href="employee.html" rel="noopener noreferrer">Employee</a>
+          </div>
+          <div class="header-link">
+            <a href="about.html" rel="noopener noreferrer">About Us</a>
+          </div>
+          <div class="header-link">
+            <a href="products.html" rel="noopener noreferrer">Our Hotels</a>
+          </div>
+        </div>
+        <!-- Dedicated container for user info -->
+        <div id="user-info" class="user-info"></div>
+      </div>
+    </header>
+
+    <!-- Employee Home Dashboard Section -->
+    <section class="employee-home-section">
+      <div class="container">
+        <h2 class="section-title">Employee Dashboard</h2>
+        <div class="employee-dashboard">
+          <!-- Upcoming Bookings Panel -->
+          <div class="dashboard-panel upcoming-bookings-panel" style="overflow-y: auto; max-height: 300px;">
+            <h3>Upcoming Bookings</h3>
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Client</th>
+                  <th>Room</th>
+                  <th>Check-In</th>
+                  <th>Check-Out</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="upcomingBookingsBody">
+                <!-- Dynamically inserted booking rows -->
+              </tbody>
+            </table>
+          </div>
+          <!-- Booking History Panel -->
+          <div class="dashboard-panel booking-history-panel">
+            <h3>Booking History</h3>
+            <ul id="bookingHistoryList" class="dashboard-list">
+              <!-- Dynamically inserted history items -->
+            </ul>
+          </div>
+        </div>
+        <!-- Quick Actions Panel -->
+        <div class="employee-actions">
+          <h3>Quick Actions</h3>
+          <button type="button" class="action-btn" id="checkInBtn">Check In</button>
+          <button type="button" class="action-btn" id="recordPaymentBtn">Record Payment</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for converting booking to renting -->
+    <div id="convertModal" class="modal">
+      <div class="modal-content">
+        <h4>Convert Booking</h4>
+        <p id="modalBookingInfo"></p>
+        <label for="newStartDate">New Start Date (YYYY-MM-DD):</label>
+        <input type="date" id="newStartDate" />
+        <label for="newEndDate">New End Date (YYYY-MM-DD):</label>
+        <input type="date" id="newEndDate" />
+        <p id="modalError" style="color: red;"></p>
+        <button id="confirmConvertBtn">Confirm Conversion</button>
+        <button id="cancelConvertBtn">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bottom-section">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2021 The Bebstore. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/employeehome.js"></script>
+  </body>
+</html>

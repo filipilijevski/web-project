@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> The Bebstore - Book a Room </title>
+    <link rel="icon" href="../images/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- Navigation/Header Section (consistent across pages) -->
+    <header>
+        <div class="header-section">
+          <div class="main-title">
+            <img src="images/bebstorelogo.png" alt="The Bebstore Logo" class="main-logo" />
+            <h2> The Bebstore </h2>
+          </div>
+          <div class="link-section">
+            <!-- Expanded Navigation Menu -->
+            <div class="header-link">
+              <a href="index.html" rel="noopener noreferrer">Home</a>
+            </div>
+            <div class="header-link">
+              <a href="search.html" rel="noopener noreferrer">Search Rooms</a>
+            </div>
+            <div class="header-link">
+              <a href="customer.html" rel="noopener noreferrer">Customer</a>
+            </div>
+            <div class="header-link">
+              <a href="employee.html" rel="noopener noreferrer">Employee</a>
+            </div>
+            <div class="header-link">
+              <a href="about.html" rel="noopener noreferrer">About Us</a>
+            </div>
+            <div class="header-link">
+              <a href="products.html" rel="noopener noreferrer">Our Hotels</a>
+            </div>
+          </div>
+          <!-- Dedicated container for user info (positioned via CSS) -->
+          <div id="user-info" class="user-info"></div>
+        </div>
+      </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+      <div class="container">
+        <h2 class="section-title">Book Your Room</h2>
+        <div class="booking-details">
+          <!-- Room Information (this can be dynamically filled later) -->
+          <div class="room-info">
+            <img src="images/cabin.jpg" alt="Selected Room" class="room-img" />
+            <div class="room-description">
+              <h3>Cozy Cabin in the Mountains</h3>
+              <p>Price: $150/night</p>
+              <p>Capacity: Double</p>
+            </div>
+          </div>
+          <!-- Booking Form -->
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="customerSin">Customer SIN:</label>
+              <input type="text" id="customerSin" name="customerSin" placeholder="Enter your SIN" required>
+            </div>
+            <div class="form-group">
+              <label for="checkinDate">Check-In Date:</label>
+              <input type="date" id="checkinDate" name="checkinDate" required>
+            </div>
+            <div class="form-group">
+              <label for="checkoutDate">Check-Out Date:</label>
+              <input type="date" id="checkoutDate" name="checkoutDate" required>
+            </div>
+            <!-- Hidden field for room_id (populated via JS when a room is selected) -->
+            <input type="hidden" id="roomId" name="roomId" value="1">
+            <div class="form-group full-width">
+              <button type="submit" id="bookBtn">Confirm Booking</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section (consistent across pages) -->
+    <footer class="bottom-section">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2021 The Bebstore. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/booking.js"></script>
+  </body>
+</html>

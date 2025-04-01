@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> The Bebstore - Search Rooms </title>
+    <link rel="icon" href="../images/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      /* Style adjustments for the search results cards */
+      .result-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #fff;
+      }
+      /* Modal styling */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+      }
+      /* Ensure each date field appears on its own line */
+      .modal-field {
+        margin-bottom: 15px;
+      }
+      .modal-field label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .modal-field input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      /* Updated styling for modal buttons */
+      .modal-btn {
+        background-color: #3882F6;
+        color: #F9FAF8;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .modal-btn:hover {
+        background-color: #2d6cb2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation/Header Section -->
+    <header>
+      <div class="header-section">
+        <div class="main-title">
+          <img src="images/bebstorelogo.png" alt="The Bebstore Logo" class="main-logo" />
+          <h2> The Bebstore </h2>
+        </div>
+        <div class="link-section">
+          <div class="header-link">
+            <a href="index.html" rel="noopener noreferrer">Home</a>
+          </div>
+          <div class="header-link">
+            <a href="search.html" rel="noopener noreferrer">Search Rooms</a>
+          </div>
+          <div class="header-link">
+            <a href="customer.html" rel="noopener noreferrer">Customer</a>
+          </div>
+          <div class="header-link">
+            <a href="employee.html" rel="noopener noreferrer">Employee</a>
+          </div>
+          <div class="header-link">
+            <a href="about.html" rel="noopener noreferrer">About Us</a>
+          </div>
+          <div class="header-link">
+            <a href="products.html" rel="noopener noreferrer">Our Hotels</a>
+          </div>
+        </div>
+        <div id="user-info" class="user-info"></div>
+      </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <h2 class="section-title">Search for Your Ideal Room</h2>
+        <form id="searchForm" class="search-form" action="#" method="GET">
+          <div class="form-group">
+            <label for="checkin">Check-In Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-Out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+          <div class="form-group">
+            <label for="capacity">Room Capacity:</label>
+            <select id="capacity" name="capacity">
+              <option value="">Any</option>
+              <option value="Single">Single</option>
+              <option value="Double">Double</option>
+              <option value="Queen">Queen</option>
+              <option value="King">King</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="hotelChain">Hotel Chain:</label>
+            <select id="hotelChain" name="hotelChain">
+              <option value="">Any</option>
+              <option value="LuxuryStay">LuxuryStay</option>
+              <option value="BudgetRooms">BudgetRooms</option>
+              <option value="CityHotels">CityHotels</option>
+              <option value="SeaSideChain">SeaSideChain</option>
+              <option value="MountainResort">MountainResort</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="category">Hotel Category:</label>
+            <select id="category" name="category">
+              <option value="">Any</option>
+              <option value="1">1 Star</option>
+              <option value="2">2 Star</option>
+              <option value="3">3 Star</option>
+              <option value="4">4 Star</option>
+              <option value="5">5 Star</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="minPrice">Min Price ($):</label>
+            <input type="number" id="minPrice" name="minPrice" min="0" step="0.01" placeholder="0">
+          </div>
+          <div class="form-group">
+            <label for="maxPrice">Max Price ($):</label>
+            <input type="number" id="maxPrice" name="maxPrice" min="0" step="0.01" placeholder="Any">
+          </div>
+          <div class="form-group full-width">
+            <button type="submit" id="searchBtn">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="results-section">
+      <div class="container">
+        <h2 class="section-title">Search Results</h2>
+        <div id="resultsContainer">
+          <p>No results found. Please adjust your criteria and try again.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Modal (for logged-in customers) -->
+    <div id="bookingModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h4>Book Room</h4>
+        <p id="bookingModalInfo"></p>
+        <div class="modal-field">
+          <label for="bookingStartDate">Booking Start Date:</label>
+          <input type="date" id="bookingStartDate" />
+        </div>
+        <div class="modal-field">
+          <label for="bookingEndDate">Booking End Date:</label>
+          <input type="date" id="bookingEndDate" />
+        </div>
+        <p id="bookingModalError" style="color: red;"></p>
+        <button id="confirmBookingBtn" class="modal-btn">Confirm Booking</button>
+        <button id="cancelBookingBtn" class="modal-btn">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bottom-section">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2021 The Bebstore. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="./js/main.js"></script>
+    <script src="./js/search.js"></script>
+  </body>
+</html>
